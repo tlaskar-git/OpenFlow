@@ -1,0 +1,43 @@
+{
+  "name": "openflow",
+  "version": "0.1.0",
+  "description": "OpenFlow is a portable Windows dictation app.",
+  "main": "src/main.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable && node scripts/create-fast-archive.js",
+    "build:signed": "electron-builder --win portable -c.win.signAndEditExecutable=true",
+    "pack": "electron-builder --dir",
+    "lint": "node --check src/main.js && node --check src/preload.js && node --check src/renderer/renderer.js && node --check scripts/after-pack.js && node --check scripts/create-fast-archive.js"
+  },
+  "build": {
+    "appId": "app.openflow.desktop",
+    "productName": "OpenFlow",
+    "directories": {
+      "output": "dist"
+    },
+    "afterPack": "scripts/after-pack.js",
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "docs/**/*",
+      "LICENSE",
+      "README.md",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "assets/icons/openflow-mark.ico",
+      "signAndEditExecutable": false
+    },
+    "portable": {
+      "artifactName": "OpenFlow_v_${version}_Portable.${ext}"
+    }
+  },
+  "devDependencies": {
+    "electron": "^42.3.3",
+    "electron-builder": "^26.0.12"
+  }
+}

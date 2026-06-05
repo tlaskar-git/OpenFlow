@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https:;">
+    <title>OpenFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body class="mode-compact">
+    <main class="app-shell">
+      <section class="topbar">
+        <div class="brand-lockup">
+          <img src="../../assets/icons/openflow-compact-mark.svg" alt="" class="brand-mark">
+          <div>
+            <h1>OpenFlow</h1>
+            <p id="miniStatusText">Ready</p>
+          </div>
+        </div>
+        <div class="window-actions">
+          <button id="recordButton" class="record-button" type="button">
+            <span class="record-dot"></span>
+            <span id="recordButtonLabel">Start</span>
+          </button>
+          <button id="expandButton" class="icon-button" type="button" title="Open settings" aria-label="Open settings">
+            <span id="expandButtonIcon" class="chevron-icon"></span>
+          </button>
+          <button id="hideButton" class="icon-button close-button" type="button" title="Minimize to tray" aria-label="Minimize to tray">
+            <span class="close-icon"></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="status-band expanded-only" aria-live="polite">
+        <div>
+          <span class="label">Status</span>
+          <strong id="statusText">Ready</strong>
+        </div>
+        <div>
+          <span class="label">Shortcut</span>
+          <strong id="shortcutText">Ctrl+Alt+Space</strong>
+        </div>
+        <div>
+          <span class="label">Provider</span>
+          <strong id="providerText">Groq compatible</strong>
+        </div>
+      </section>
+
+      <section class="content-grid expanded-only">
+        <form id="settingsForm" class="panel">
+          <div class="panel-header">
+            <h2>Settings</h2>
+            <button class="secondary-button" id="testProviderButton" type="button">Test</button>
+          </div>
+
+          <div class="two-up">
+            <label>
+              <span>API key</span>
+              <input id="apiKey" type="password" autocomplete="off" placeholder="Saved. Enter a new key to replace it.">
+            </label>
+
+            <label>
+              <span>API base URL</span>
+              <input id="apiBaseUrl" type="url" spellcheck="false">
+            </label>
+          </div>
+
+          <div class="two-up">
+            <label>
+              <span>Transcription model</span>
+              <input id="transcriptionModel" type="text" spellcheck="false">
+            </label>
+            <label>
+              <span>Cleanup model</span>
+              <input id="cleanupModel" type="text" spellcheck="false">
+            </label>
+          </div>
+
+          <div class="two-up">
+            <label>
+              <span>Fallback cleanup model</span>
+              <input id="fallbackCleanupModel" type="text" spellcheck="false">
+            </label>
+            <label>
+              <span>Global shortcut</span>
+              <input id="shortcut" type="text" spellcheck="false">
+            </label>
+          </div>
+
+          <div class="two-up">
+            <label>
+              <span>Output language</span>
+              <input id="outputLanguage" type="text" placeholder="Optional">
+            </label>
+
+            <label>
+              <span>Custom vocabulary</span>
+              <textarea id="customVocabulary" rows="2" spellcheck="false" placeholder="Names, brands, project terms"></textarea>
+            </label>
+          </div>
+
+          <label class="toggle-row">
+            <input id="cleanupEnabled" type="checkbox">
+            <span>Clean transcripts before pasting</span>
+          </label>
+
+          <div class="form-actions">
+            <button class="secondary-button" id="openDataFolderButton" type="button">Data Folder</button>
+            <button class="primary-button" type="submit">Save</button>
+          </div>
+        </form>
+
+        <aside class="panel transcript-preview">
+          <span class="label">Latest transcript</span>
+          <p id="latestTranscript">Nothing recorded yet.</p>
+        </aside>
+      </section>
+    </main>
+    <script src="./renderer.js"></script>
+  </body>
+</html>

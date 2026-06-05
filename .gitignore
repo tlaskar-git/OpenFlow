@@ -1,0 +1,11 @@
+node_modules/
+dist/*
+!dist/OpenFlow_v_0.1.0_Portable.exe
+!dist/OpenFlow_v_0.1.0_Portable.exe.sha256
+!dist/OpenFlow_v_0.1.0_Fast.7z
+!dist/OpenFlow_v_0.1.0_Fast.7z.sha256
+out/
+*.log
+.env
+.DS_Store
+Thumbs.db
