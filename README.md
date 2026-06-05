@@ -36,20 +36,20 @@ Fast launch, recommended:
 
 Extract once, then run `OpenFlow.exe` from the extracted folder. This avoids the startup delay from the single-file portable wrapper.
 
-Fast archive size: `94,016,274` bytes
+Fast archive size: `94,018,335` bytes
 
 ```text
-015C6D7EE47F2A873617BB0573B45256A99E8B08D14FD91E3D51E02D8657BC48
+F6032EF53BACAB4361ABDD391F63D6AC0F13413B35854AB936808288992AB1B8
 ```
 
 Single-file portable, slower to start:
 
 [Download OpenFlow_v_0.1.0_Portable.exe](dist/OpenFlow_v_0.1.0_Portable.exe)
 
-Portable executable size: `94,392,531` bytes
+Portable executable size: `94,393,898` bytes
 
 ```text
-aae4c146e8467eaab02ef1fe643d78c9c680121d5be3cc4a1a48d73e26092b41
+4c80388e9b595601ab29144a56b50153eeb8f119f1d7e32f1c65e3d5583e2c45
 ```
 
 OpenFlow starts as a compact always-on-top control near the top of the screen. Use the arrow button to open the full settings view. The close button hides it to the tray; quit from the tray menu.
