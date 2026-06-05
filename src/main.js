@@ -21,7 +21,7 @@ const path = require("path");
 
 const APP_NAME = "OpenFlow";
 const APP_USER_MODEL_ID = "app.openflow.desktop";
-const COMPACT_SIZE = { width: 508, height: 56 };
+const COMPACT_SIZE = { width: 528, height: 56 };
 const EXPANDED_SIZE = { width: 980, height: 700 };
 const CLIPBOARD_CLEAR_DELAY_MS = 30_000;
 const LEGACY_DEFAULT_CLEANUP_MODEL = "openai/gpt-oss-20b";

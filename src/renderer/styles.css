@@ -362,7 +362,7 @@ textarea {
   background: rgba(245, 244, 239, 0.98);
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.16);
   justify-content: flex-start;
-  gap: 24px;
+  gap: 12px;
 }
 
 .mode-compact .brand-lockup {
@@ -400,7 +400,7 @@ textarea {
 
 .mode-compact .brand-lockup p {
   align-self: baseline;
-  max-width: 90px;
+  max-width: 70px;
   overflow: hidden;
   margin-top: 0;
   font-size: 12px;
