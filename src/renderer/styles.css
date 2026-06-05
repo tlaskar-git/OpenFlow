@@ -358,7 +358,7 @@ textarea {
   margin: 0;
   padding: 4px 6px 4px 14px;
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 16px;
   background: rgba(245, 244, 239, 0.98);
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.16);
   justify-content: flex-start;

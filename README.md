@@ -46,10 +46,10 @@ Single-file portable, slower to start:
 
 [Download OpenFlow_v_0.1.0_Portable.exe](dist/OpenFlow_v_0.1.0_Portable.exe)
 
-Portable executable size: `94,391,846` bytes
+Portable executable size: `94,392,531` bytes
 
 ```text
-974FFF23440885B093371267F49962F44FCF9E0974B669FDD46247F0B3C144D1
+aae4c146e8467eaab02ef1fe643d78c9c680121d5be3cc4a1a48d73e26092b41
 ```
 
 OpenFlow starts as a compact always-on-top control near the top of the screen. Use the arrow button to open the full settings view. The close button hides it to the tray; quit from the tray menu.
